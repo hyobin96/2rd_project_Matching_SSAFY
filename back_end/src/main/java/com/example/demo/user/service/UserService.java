@@ -8,6 +8,7 @@ import com.example.demo.user.dto.UserProfileResponse;
 import com.example.demo.user.dto.UserProfileUpdateRequest;
 import com.example.demo.user.entity.User;
 import com.example.demo.team.dao.TeamRepository;
+import com.hazelcast.core.HazelcastInstance;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;

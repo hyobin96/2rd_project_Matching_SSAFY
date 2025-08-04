@@ -8,6 +8,7 @@ import com.example.demo.chat.service.ChatRoomService;
 import com.example.demo.team.dao.TeamRepository;
 import com.example.demo.team.dto.*;
 import com.example.demo.team.entity.Team;
+import com.hazelcast.core.HazelcastInstance;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -26,6 +27,7 @@ public class TeamService {
     private final TeamRepository teamRepository;
     private final UserRepository userRepository;
     private final ChatRoomService chatRoomService;
+    private final HazelcastInstance hazelcastInstance;
     // 1. 팀 생성
     @Transactional
     public TeamResponse createTeam(TeamRequest dto) {
