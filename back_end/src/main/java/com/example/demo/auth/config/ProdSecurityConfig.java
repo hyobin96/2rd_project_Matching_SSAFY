@@ -56,7 +56,7 @@ public class ProdSecurityConfig {
                                 .requestMatchers(HttpMethod.POST, "/users/profile","/users/profile/search").permitAll()
                                 .requestMatchers(HttpMethod.DELETE, "/users/profile/**","/team/**").permitAll()
                                 .requestMatchers("/chatroom/**", "/ws-chat/**").authenticated()
-                                .anyRequest().authenticated());
+                                .anyRequest().permitAll());
 
         http.oauth2Login(oauth2 -> oauth2
                 .authorizationEndpoint(authorization -> authorization
